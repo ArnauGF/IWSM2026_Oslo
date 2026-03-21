@@ -361,7 +361,7 @@ $$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \text
 * We [evaluate dynamic predictions]{style="color:#EB589A;"} within $(1,3]$ obtained via three Cox proportional-hazards models:
   + The true model $\longrightarrow$ [$M_\text{True}$]{style="color:#EB589A;"}
   + Two misspecified models $\longrightarrow$ [$M_1, M_2$]{style="color:#EB589A;"}
-* To reflect the [asymmetry between FP and FN]{style="color:#EB589A;"} in clinical context, we set [$c\in(0.1, 0.3)$]{style="color:#EB589A;"}
+* To reflect the [asymmetry between FP and FN]{style="color:#EB589A;"} in our clinical context, we set [$c\in(0.1, 0.3)$]{style="color:#EB589A;"}
 </div>
 
 
@@ -381,6 +381,9 @@ $$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \text
   <img src="images/ws.png" style="width:85%; text-align:center;">
 </div>
 
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/barplots.png" style="width:100%; text-align:center;">
+</div>
 
 
 ## Application: OPTICORE {.background-slide}

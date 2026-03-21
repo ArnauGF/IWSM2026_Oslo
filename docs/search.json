@@ -60,7 +60,7 @@
     "href": "index.html#simulation-study",
     "title": "",
     "section": "Simulation study",
-    "text": "Simulation study\n\n\nWe evaluate dynamic predictions within \\((1,3]\\) obtained via three Cox proportional-hazards models:\n\nThe true model \\(\\longrightarrow\\) \\(M_\\text{True}\\)\nTwo misspecified models \\(\\longrightarrow\\) \\(M_1, M_2\\)\n\nTo reflect the asymmetry between FP and FN in clinical context, we set \\(c\\in(0.1, 0.3)\\)"
+    "text": "Simulation study\n\n\nWe evaluate dynamic predictions within \\((1,3]\\) obtained via three Cox proportional-hazards models:\n\nThe true model \\(\\longrightarrow\\) \\(M_\\text{True}\\)\nTwo misspecified models \\(\\longrightarrow\\) \\(M_1, M_2\\)\n\nTo reflect the asymmetry between FP and FN in our clinical context, we set \\(c\\in(0.1, 0.3)\\)"
   },
   {
     "objectID": "index.html#application-opticore",

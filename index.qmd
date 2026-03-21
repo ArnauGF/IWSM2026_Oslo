@@ -46,7 +46,7 @@ format:
 </div>
 
 <div style="position:absolute; top:90%; left:78%;" class="fragment fade-in">
-  [FN]{style="color:#FF4040;"}
+  [FN]{style="color:#D30000;"}
 </div>
 
 
@@ -401,8 +401,8 @@ $$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \text
 $$ \require{color}\scriptsize\begin{cases}
          \texttt{PI_UA}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{1i}(t)$} + \varepsilon_{1i}(t) \\
         &=  (\beta_0^1 + b_{0i}^1) + (\beta_{1}^1 + b_{1i}^1)B_1^1(t,\lambda) +  (\beta_{2}^1 + b_{2i}^1)B_2^1(t,\lambda)  + \varepsilon_{1i}(t),\\
-        \log(\texttt{STV}_i(t)) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{4i}(t)$} + \varepsilon_{4i}(t)\\
-        & = (\beta_0^4 + b_{0i}^4) + (\beta_{1}^4 + b_{1i}^4)B_1^4(t,\lambda) +  (\beta_{2}^4 + b_{2i}^4)B_2^4(t,\lambda)  + \varepsilon_{4i}(t)
+        \log(\texttt{STV}_i(t)) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{2i}(t)$} + \varepsilon_{2i}(t)\\
+        & = (\beta_0^2 + b_{0i}^2) + (\beta_{1}^2 + b_{1i}^2)B_1^2(t,\lambda) +  (\beta_{2}^2 + b_{2i}^2)B_2^2(t,\lambda)  + \varepsilon_{2i}(t)
     \end{cases}$$
 </div>
 
@@ -413,5 +413,25 @@ $$\scriptsize\begin{cases}
 \textcolor{#EB589A}{\text{JM}_{\text{PI_UA}}}: & h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_1\colorbox{#EB589A}{$\color{#FBE1EE}\frac{m_{1i}(t) - m_{1i}(t-7)}{7}$} \big) \\
 \textcolor{#EB589A}{\text{JM}_{\text{STV}}}: & h_{i}\left(t \mid \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_{i}(t)$}, \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_2\colorbox{#EB589A}{$\color{#FBE1EE}\int_{t-7}^tm_{2i}(s)ds$} \big) 
 \end{cases}$$
+</div>
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/wdcs1.png" style="width:100%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/wdcs3.png" style="width:100%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/wdcs4.png" style="width:100%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/wdcs5.png" style="width:100%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/wdcs2.png" style="width:100%; text-align:center;">
 </div>
 

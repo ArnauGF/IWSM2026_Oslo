@@ -63,7 +63,7 @@ format:
 
 ## Definitions and notation {.background-slide}
 
-<div style="position:absolute; top:12%; left:0%;" class="fragment fade-out">
+<div style="position:absolute; top:12%; left:0%;" class="fragment fade-in-then-out">
 -   $\require{color}\textcolor{#EB589A}{T_1^*,\dots, T_n^*}$ true time until event
 -   $\require{color}\textcolor{#EB589A}{C_1,\dots, C_n}$ right-censoring times
 -   $\require{color}\textcolor{#EB589A}{L_1,\dots, L_n}$ left-truncation times
@@ -129,7 +129,7 @@ format:
 
 ## Clinical utility {.background-slide}
 
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-out">
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
   - Focus on the [quality of decisions]{style="color:#EB589A;"} driven by dynamic predictions
   - Based on a clinically relevant [decision threshold]{style="color:#EB589A;"} $c\in(0,1)$
 </div>
@@ -469,7 +469,7 @@ $$\scriptsize\begin{cases}
 :::
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
-- [Limitations]{style="color:#EB589A;"} of the work:
+- [Limitations]{style="color:#EB589A;"}:
   + Assumption of [covariate independence]{style="color:#EB589A;"} from truncation and censoring
   + Reducing the time-to-event outcome to a [binary outcome]{style="color:#EB589A;"} discards relevant information 
 </div>

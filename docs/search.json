@@ -74,6 +74,6 @@
     "href": "index.html#contribution-of-the-work",
     "title": "",
     "section": "Contribution of the work",
-    "text": "Contribution of the work\n\n\nExtension of clinical utility measures (NB and EC) to dynamic prediction\nDynamic IWEC definition and weighted decision curves\nIPW estimator tailored to LRTC data\nAll methods will be available in the JMbayes2 R package\n\n\n\n\n\n\n\nLimitations of the work:\n\nAssumption of covariate independence from truncation and censoring\nReducing the time-to-event outcome to a binary outcome discards relevant information"
+    "text": "Contribution of the work\n\n\nExtension of clinical utility measures (NB and EC) to dynamic prediction\nDynamic IWEC definition and weighted decision curves\nIPW estimator tailored to LRTC data\nAll methods will be available in the JMbayes2 R package\n\n\n\n\n\n\n\nLimitations:\n\nAssumption of covariate independence from truncation and censoring\nReducing the time-to-event outcome to a binary outcome discards relevant information"
   }
 ]

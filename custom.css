@@ -1,3 +1,13 @@
+.reveal {
+  font-family: "Gill Sans Extrabold", Helvetica;
+}
+
+/* Slide titles */
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Gill Sans Extrabold", Helvetica;
+}
 /* Smooth scale + fade animations for images */
 .image-grid {
   display: grid;
@@ -80,5 +90,5 @@
 }
 
 .reveal .progress span {
-  background: #EB589A;
+  background: #ba1732;
 }

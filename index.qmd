@@ -9,13 +9,13 @@ format:
     menu: false
 ---
 
-## { data-state="cover-slide" data-background-image="images/cover.png" data-background-size="cover" visibility="uncounted"}
+## { data-state="cover-slide" data-background-image="images/oslo_cover.png" data-background-size="cover" visibility="uncounted"}
 
-## Motivation {.background-slide}
+## Motivation 
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-out">
-  - [Evaluate dynamic predictions]{style="color:#EB589A;"} of imminent delivery in pregnancies complicated by early-onset fetal growth restriction
-  - [Main goal]{style="color:#EB589A;"}: optimizing antenatal corticosteroid (CCS) administration
+  - [Evaluate dynamic predictions]{style="color:#ba1732;"} of imminent delivery ([7 days]{style="color:#ba1732;"}) in pregnancies complicated by early-onset fetal growth restriction.
+  - [Main goal]{style="color:#ba1732;"} $\longrightarrow$ optimizing antenatal corticosteroid (CCS) administration
 </div>
 
 <div style="position:absolute; top:60%; left:12%;">
@@ -23,11 +23,11 @@ format:
 </div>
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-in">
-  - Methods are applied to data from the [OPTICORE]{style="color:#EB589A;"} multicenter cohort study 
+  - [OPTICORE]{style="color:#ba1732;"} data $\longrightarrow$ multicenter cohort study in the Netherlands
 </div>
 
 
-## Asymmetric misclassification {.background-slide}
+## Asymmetric misclassification 
 
 <div style="position:absolute; top:9%; left:18%;">
   <img src="images/decision_tree.svg" style="width:80%; text-align:center;">
@@ -51,26 +51,26 @@ format:
 
 
 
-## Definitions and notation {.background-slide}
+## Definitions and notation
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-in-then-out">
 - $i=1,\dotsc,n$ individuals
--   $\require{color}\textcolor{#EB589A}{T_1^*,\dots, T_n^*}$ true time until event
--   $\require{color}\textcolor{#EB589A}{C_1,\dots, C_n}$ right-censoring times
--   $\require{color}\textcolor{#EB589A}{T_i=\min(T_i^*, C_i)}$ observed times
--   $\require{color}\textcolor{#EB589A}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}$ censoring indicator
--   $\require{color}\textcolor{#EB589A}{L_1,\dots, L_n}$ left-truncation times
--   $\require{color}\textcolor{#EB589A}{\boldsymbol{\mathcal{H}}_i(t)}$ available history at time $t$
+-   $\require{color}\textcolor{#ba1732}{T_i^*}$ true time until event
+-   $\require{color}\textcolor{#ba1732}{C_i}$ right-censoring times
+-   $\require{color}\textcolor{#ba1732}{T_i=\min(T_i^*, C_i)}$ observed times
+-   $\require{color}\textcolor{#ba1732}{\delta_i=\mathbf{1}\{T_i^*\leq C_i\}}$ censoring indicator
+-   $\require{color}\textcolor{#ba1732}{L_i}$ left-truncation times
+-   $\require{color}\textcolor{#ba1732}{\boldsymbol{\mathcal{H}}_i(t)}$ available history at time $t$
 </div>
 
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-in">
-  - [Dynamic predictions]{style="color:#EB589A;"}
+  - [Dynamic predictions]{style="color:#ba1732;"}
 </div>
 
 <div style="position:absolute; top:22%; left:9%;" class="fragment fade-in">
   $$
   \normalsize\require{color}
-  \pi_{i}(s \mid t)=\operatorname{Pr}\left(T_{i}^* \leq t+s \mid T_{i}^*>t, \colorbox{#EB589A}{$\color{#FBE1EE}\boldsymbol{\mathcal{H}}_i(t)$}\right)
+  \pi_{i}(s \mid t)=\operatorname{Pr}\left(T_{i}^* \leq t+s \mid T_{i}^*>t, \colorbox{#ba1732}{$\color{#ffffff}\boldsymbol{\mathcal{H}}_i(t)$}\right)
   $$
 </div>
 
@@ -80,33 +80,32 @@ format:
 
 
 
-
-## Scoring rules {.background-slide}
+## Scoring rules
 
 
 <div style="position:absolute; top:13%; left:12%;" class="fragment fade-in-then-out">
   <img src="images/sr1.svg" style="width:90%; text-align:center;">
 </div>
 
-<div style="position:absolute; top:15%; left:12%;" class="fragment fade-in-then-out">
+<div style="position:absolute; top:13%; left:12%;" class="fragment fade-in-then-out">
   <img src="images/sr2.svg" style="width:90%; text-align:center;">
 </div>
 
-<div style="position:absolute; top:15%; left:12%;" class="fragment fade-in-then-out">
+<div style="position:absolute; top:13%; left:12%;" class="fragment fade-in-then-out">
   <img src="images/sr3.svg" style="width:90%; text-align:center;">
 </div>
 
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A scoring rule is [proper]{style="color:#EB589A;"} if 
+  - A scoring rule is [proper]{style="color:#ba1732;"} if 
   
-  $$ E\left[\mathcal{S}\big(\pi_i^{\text{true}}(s\mid t), D_i(t,s)\big) \right] \leq E\left[\mathcal{S}\big(\widehat{\pi}_i(s\mid t), D_i(t,s)\big) \right] $$
+  $$ E\left[\mathcal{S}\big(\pi_i^{\text{true}}(s\mid t), D_i(t,s)\big) \right] \leq E\left[\mathcal{S}\big(\widehat{\pi}_i(s\mid t), D_i(t,s)\big) \right]. $$
   
-  - It is [strictly proper]{style="color:#EB589A;"} if it holds with equality if and only if $\pi_i^{\text{true}}(s\mid t)\equiv \widehat{\pi}_i(s\mid t)$
+  - It is [strictly proper]{style="color:#ba1732;"} if it holds with equality if and only if $\pi_i^{\text{true}}(s\mid t)\equiv \widehat{\pi}_i(s\mid t)$.
 
 <div style="height:10px;"></div>
 
-  - It is [centered]{style="color:#EB589A;"} if $\mathcal{S}(1,1)=\mathcal{S}(0,0)=0$
+  - It is [centered]{style="color:#ba1732;"} if $\mathcal{S}(1,1)=\mathcal{S}(0,0)=0$.
 </div>
 
 <div style="position:absolute; top:18%; left:10%;" class="fragment fade-in-then-out">
@@ -114,28 +113,28 @@ format:
 </div>
 
 
-## Scoring rules: limitations {.background-slide}
+## Scoring rules: limitations 
 
 <div style="height:15px;"></div>
 
-- They quantify predictive accuracy, but [not the consequences of decisions based on predictions]{style="color:#EB589A;"}
+- They quantify predictive accuracy, but [not the consequences of decisions based on predictions]{style="color:#ba1732;"}.
 
 <div style="height:10px;"></div>
 
-- They do not account for the [asymmetric harms of false-positives and false-negatives]{style="color:#EB589A;"} decisions
+- They do not account for the [asymmetric harms of false-positives and false-negatives]{style="color:#ba1732;"} decisions.
 
 
-## Clinical utility {.background-slide}
+## Clinical utility 
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
 
 <div style="height:15px;"></div>
 
-  - Focus on the [quality of decisions]{style="color:#EB589A;"} driven by dynamic predictions
+  - Focus on the [quality of decisions]{style="color:#ba1732;"} driven by dynamic predictions.
   
 <div style="height:10px;"></div>
 
-  - Based on a clinically relevant [decision threshold]{style="color:#EB589A;"} $c\in(0,1)$
+  - Based on a clinically relevant [decision threshold]{style="color:#ba1732;"} $c\in(0,1)$.
 </div>
 
 <div style="position:absolute; top:15%; left:3%;" class="fragment fade-in-then-out">
@@ -143,10 +142,10 @@ format:
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A widely used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
-  - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
-  - We define the [dynamic EC]{style="color:#EB589A;"} 
-$$ \normalsize\require{color}\begin{split}
+  - Widely used clinical utility metric $\longrightarrow$ [net benefit (NB)]{style="color:#ba1732;"}
+  - [Expected cost (EC)]{style="color:#ba1732;"}:
+  
+$$\normalsize\require{color}\begin{split}
         \begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) =  c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
         &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
@@ -155,47 +154,47 @@ $$ \normalsize\require{color}\begin{split}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A widely used  clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
-  - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
-  - We define the [dynamic EC]{style="color:#EB589A;"} 
+  - Widely used clinical utility metric $\longrightarrow$ [net benefit (NB)]{style="color:#ba1732;"}
+  - [Expected cost (EC)]{style="color:#ba1732;"}:
+  
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
-        \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) = c\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
+        \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) = c\textcolor{#ba1732}{\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
         &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
     \end{split}
     \end{split} $$ 
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A widely used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
-  - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
-  - We define the [dynamic EC]{style="color:#EB589A;"} 
+  - Widely used clinical utility metric $\longrightarrow$ [net benefit (NB)]{style="color:#ba1732;"}
+  - [Expected cost (EC)]{style="color:#ba1732;"}: 
+  
 $$ \normalsize\require{color}\begin{split}
         \begin{split}
-        \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) = \textcolor{#EB589A}{c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
+        \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) = \textcolor{#ba1732}{c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))}\\
         &+(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)
     \end{split}
     \end{split} $$ 
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A widely used  clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
-  - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
-  - We define the [dynamic EC]{style="color:#EB589A;"} 
+  - Widely used clinical utility metric $\longrightarrow$ [net benefit (NB)]{style="color:#ba1732;"}
+  - [Expected cost (EC)]{style="color:#ba1732;"}:
+  
 $$ \normalsize\require{color}\begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
-        &+(1-c)\textcolor{#EB589A}{\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
+        &+(1-c)\textcolor{#ba1732}{\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
     \end{split} $$ 
 </div>
 
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - A widely used clinical utility metric is the [net benefit (NB)]{style="color:#EB589A;"} 
-  - A similar metric is the [expected cost (EC)]{style="color:#EB589A;"} 
-  - We define the [dynamic EC]{style="color:#EB589A;"} 
+  - Widely used clinical utility metric $\longrightarrow$ [net benefit (NB)]{style="color:#ba1732;"}
+  - [Expected cost (EC)]{style="color:#ba1732;"}:
+  
 $$ \normalsize\require{color}\begin{split}
         \text{EC}_c\big(\pi_i(s\mid t),\, & D_i(t,s)\big) = c\mathbf{1}\{\pi_i(s\mid t)\geq c\} (1-D_i(t,s))\\
-        &+\textcolor{#EB589A}{(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
+        &+\textcolor{#ba1732}{(1-c)\mathbf{1}\{\pi_i(s\mid t)< c\}D_i(t,s)}
     \end{split} $$ 
 </div>
 
@@ -206,36 +205,36 @@ $$ \normalsize\require{color}\begin{split}
 
 
 <div style="position:absolute; top:80%; left:0%;" class="fragment fade-in-then-out">
-- NB and EC rely on a [single decision threshold]{style="color:#EB589A;"}  $c\in (0,1)$
+- NB and EC rely on a [single decision threshold]{style="color:#ba1732;"}  $c\in (0,1)$
 </div>
 
 
 
 
-## Integrated weighted expected cost {.background-slide}
+## Integrated weighted expected cost 
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - To avoid reliance on a single $c$ and achieve strict properness we define the [IWEC]{style="color:#EB589A;"}
+  - To avoid reliance on a single $c$ and achieve strict properness:
   
   $$\normalsize\require{color}\begin{split} & \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ & \int_0^1\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)w(c)dc \end{split} $$
   
-  - $w(\cdot)$ is a positive weight function reflecting the [clinical relevance of different $c$'s]{style="color:#EB589A;"}
+  - $w(\cdot)$ $\longrightarrow$ positive weight function reflecting the [clinical relevance of different $c$'s]{style="color:#ba1732;"}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - To avoid reliance on a single $c$ and achieve strict properness we define the [IWEC]{style="color:#EB589A;"}
+  - To avoid reliance on a single $c$ and achieve strict properness:
   
-  $$\normalsize\require{color}\begin{split} & \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ & \textcolor{#EB589A}{\int_0^1}\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)\textcolor{#EB589A}{w(c)dc} \end{split} $$
+  $$\normalsize\require{color}\begin{split} & \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ & \textcolor{#ba1732}{\int_0^1}\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)\textcolor{#ba1732}{w(c)dc} \end{split} $$
   
-  - $w(\cdot)$ is a positive weight function reflecting the [clinical relevance of different $c$'s]{style="color:#EB589A;"}
+  - $w(\cdot)$ $\longrightarrow$ positive weight function reflecting the [clinical relevance of different $c$'s]{style="color:#ba1732;"}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-  - To avoid reliance on a single $c$ and achieve strict properness we define the [IWEC]{style="color:#EB589A;"}
+  - To avoid reliance on a single $c$ and achieve strict properness:
   
-  $$\normalsize\require{color}\begin{split} & \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ & \textcolor{#EB589A}{\int_0^1}\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)\textcolor{#EB589A}{w(c)dc} \end{split} $$
+  $$\normalsize\require{color}\begin{split} & \text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big) = \\ & \textcolor{#ba1732}{\int_0^1}\text{EC}_c\big(\pi_i(s\mid t),D_i(t,s)\big)\textcolor{#ba1732}{w(c)dc} \end{split} $$
   
-  - We consider the [beta family]{style="color:#EB589A;"} of weight functions [$w(c;\alpha,\beta)$]{style="color:#EB589A;"}
+  - In practice $\longrightarrow$ [beta family]{style="color:#ba1732;"} of weight functions [$w(c;\alpha,\beta)$]{style="color:#ba1732;"}
 </div>
 
 ::: {.fragment .fade-in-then-out}
@@ -244,45 +243,19 @@ $$ \normalsize\require{color}\begin{split}
 <img src="images/table3.svg" width="75%">
 </center>
 
-- We rely on a weight function, [considering all thresholds]{style="color:#EB589A;"} $c\in (0,1)$ and its [relative clinical importance]{style="color:#EB589A;"}
+- Weight function $\longrightarrow$ [all thresholds]{style="color:#BA1732;"} $c\in (0,1)$ and its [relative clinical importance]{style="color:#BA1732;"}.
 
 
 
 :::
 
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
-* A scoring rule is centered strictly proper [$\Longleftrightarrow$]{style="color:#EB589A;"} it can be represented by $\text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big)$ for some $w(\cdot)$
-  + For [$w(c)=1$]{style="color:#EB589A;"}, we obtain the dynamic Brier score
-  + For [$w(c)=c^{-1}(1-c)^{-1}$]{style="color:#EB589A;"}, we obtain the dynamic logarithmic score
+<div style="position:absolute; top:10%; left:12%;" class="fragment fade-in-then-out">
+  <img src="images/ws_first.png" style="width:85%; text-align:center;">
 </div>
 
-
-
-
-
-
-## Estimation under LTRC data {.background-slide}
-
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-- To [estimate]{style="color:#EB589A;"}:
-
-$$\text{eIWEC}_w(t,s)=E\big[\text{IWEC}_w\big(\pi(s\mid t),D(t,s)\big) \mid T^*>t\big]$$
-
-- We propose a nonparametric IPW estimator [$\widehat{\text{eIWEC}_w}(t,s)$]{style="color:#EB589A;"}, tailored to [LTRC]{style="color:#EB589A;"} data
-- We established its [consistency]{style="color:#EB589A;"} and [asymptotic normality]{style="color:#EB589A;"}
+<div style="position:absolute; top:10%; left:12%;" class="fragment fade-in-then-out">
+  <img src="images/ws_shaded_area.png" style="width:85%; text-align:center;">
 </div>
-
-
-
-## Simulation study {.background-slide}
-
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-* We [evaluate dynamic predictions]{style="color:#EB589A;"} within $(1,3]$ obtained via three Cox proportional-hazards models:
-  + The true model $\longrightarrow$ [$M_\text{True}$]{style="color:#EB589A;"}
-  + Two misspecified models $\longrightarrow$ [$M_1, M_2$]{style="color:#EB589A;"}
-* To reflect the [asymmetry between FP and FN]{style="color:#EB589A;"} in our clinical context, we set [$c\in(0.1, 0.3)$]{style="color:#EB589A;"}
-</div>
-
 
 <div style="position:absolute; top:10%; left:12%;" class="fragment fade-in-then-out">
   <img src="images/w1_l.png" style="width:85%; text-align:center;">
@@ -300,91 +273,112 @@ $$\text{eIWEC}_w(t,s)=E\big[\text{IWEC}_w\big(\pi(s\mid t),D(t,s)\big) \mid T^*>
   <img src="images/ws_l.png" style="width:85%; text-align:center;">
 </div>
 
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
+* A scoring rule is centered and strictly proper [$\Longleftrightarrow$]{style="color:#BA1732;"} it can be represented by $\text{IWEC}_w \big(\pi_i(s\mid t), D_i(t,s)\big)$ for some $w(\cdot)$.
+  + [$w(c)=1$]{style="color:#BA1732;"} $\longrightarrow$ [Brier score]{style="color:#BA1732;"}
+  + [$w(c)=c^{-1}(1-c)^{-1}$]{style="color:#BA1732;"} $\longrightarrow$  [logarithmic score]{style="color:#BA1732;"}
+</div>
+
+
+
+
+
+## Estimation under LTRC data 
+
+* To [estimate]{style="color:#BA1732;"}:
+
+$$\text{eIWEC}_w(t,s)=E\big[\text{IWEC}_w\big(\pi(s\mid t),D(t,s)\big) \mid T^*>t\big]$$
+
+* We propose two approaches:
+  + A nonparametric [IPW]{style="color:#BA1732;"} estimator.
+  + A [model-based]{style="color:#BA1732;"} estimator.
+
+* We established [consistency]{style="color:#BA1732;"} and [asymptotic normality]{style="color:#BA1732;"}.
+
+
+
+## Simulation study 
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+* We [evaluate dynamic predictions]{style="color:#BA1732;"} within $(1,3]$ obtained via three Cox proportional-hazards models:
+  + The true model $\longrightarrow$ [$M_\text{True}$]{style="color:#BA1732;"}
+  + Two misspecified models $\longrightarrow$ [$M_1, M_2$]{style="color:#BA1732;"}
+<div style="height:25px;"></div>
+* To reflect the [asymmetry between FP and FN]{style="color:#BA1732;"} in our clinical context, we set [$c\in(0.1, 0.3)$]{style="color:#BA1732;"}.
+</div>
+
+<div style="position:absolute; top:10%; left:12%;" class="fragment fade-in-then-out">
+  <img src="images/ws_simulstudy.png" style="width:85%; text-align:center;">
+</div>
+
 <div style="position:absolute; top:12%; left:0%;" class="fragment fade-in">
   <img src="images/plot_left.png" style="width:48%; text-align:center;">
 </div>
 
-<div style="position:absolute; top:15%; left:50%;" class="fragment fade-in">
+<div style="position:absolute; top:12.1%; left:50%;" class="fragment fade-in">
   <img src="images/plot_right.png" style="width:150%; text-align:center;">
 </div>
 
 
 
-## Application: OPTICORE {.background-slide}
+## Application: OPTICORE 
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-* [Baseline covariates]{style="color:#EB589A;"}: age, previous pregnancy outcomes, smoking status, pre-existent use of antihypertensive agents, diabetes mellitus, etc.
-* We consider [fetal longitudinal biomarkers]{style="color:#EB589A;"}:
-  + Pulsatility index of the umbilical artery [($\texttt{PI_UA}$)]{style="color:#EB589A;"}
-  + Short-term heart-rate variability [($\texttt{STV}$)]{style="color:#EB589A;"}
+* [Goal]{style="color:#BA1732"} $\longrightarrow$ outperform current clinical practice for CCS administration.
+* In the Netherlands:
+  + [Strategy 1]{style="color:#BA1732"} $\longrightarrow$ when pulsatility index of the umbilical artery becomes abnormal
+  + [Strategy 2]{style="color:#BA1732"} $\longrightarrow$ when an absent or reversed end-diastolic velocity of the umbilical artery is detected
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-- [Linear mixed-effects]{style="color:#EB589A;"} submodels:
-
-$$ \require{color}\scriptsize\begin{cases}
-         \texttt{PI_UA}_i(t) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{1i}(t)$} + \varepsilon_{1i}(t) \\
-        &=  (\beta_0^1 + b_{0i}^1) + (\beta_{1}^1 + b_{1i}^1)B_1^1(t,\lambda) +  (\beta_{2}^1 + b_{2i}^1)B_2^1(t,\lambda)  + \varepsilon_{1i}(t)\\
-        \\
-        \log(\texttt{STV}_i(t)) & = \colorbox{#EB589A}{$\color{#FBE1EE}m_{2i}(t)$} + \varepsilon_{2i}(t)\\
-        & = (\beta_0^2 + b_{0i}^2) + (\beta_{1}^2 + b_{1i}^2)B_1^2(t,\lambda) +  (\beta_{2}^2 + b_{2i}^2)B_2^2(t,\lambda)  + \varepsilon_{2i}(t)
-    \end{cases},$$
-</div>
-
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-- Shared-parameter [joint models]{style="color:#EB589A;"} using the same baseline data $\boldsymbol{X}_i$ and the two longitudinal submodels:
+- [Joint model]{style="color:#BA1732;"} considering four different fetal outcomes:
 
 $$\scriptsize\begin{split} 
-\textcolor{#EB589A}{\text{JM}_{\text{PI_UA}}}: & h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_1\colorbox{#EB589A}{$\color{#FBE1EE}\frac{m_{1i}(t) - m_{1i}(t-7)}{7}$} \big) \\
-\textcolor{#EB589A}{\text{JM}_{\text{STV}}}: & h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \big(  \gamma\boldsymbol{X}_{i} + \alpha_2\colorbox{#EB589A}{$\color{#FBE1EE}\frac{1}{7}\int_{t-7}^tm_{2i}(s)ds$} \big) 
+\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{Y_{ji}(t)\} \right) 
 \end{split}$$
 
-- We evaluate [dynamic predictions]{style="color:#EB589A;"} within $(200, 207]$ days of gestation. We still consider [$c\in(0.1,0.3)$]{style="color:#EB589A;"}, we use [$w(c;5.16, 17.62)$]{style="color:#EB589A;"}
+- [Dynamic predictions]{style="color:#BA1732;"} $\longrightarrow$  $(182, 189]$ days of gestation. 
+- We still consider [$c\in(0.1,0.3)$]{style="color:#BA1732;"}, we use [$w(c;5.16, 17.62)$]{style="color:#BA1732;"}
 </div>
 
-
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-- We extend the classical decision curve analysis by defining [weighted decision curves]{style="color:#EB589A;"}
-</div>
 
 <div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
-  <img src="images/decision_one.png" style="width:100%; text-align:center;">
-</div>
-
-<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
-  <img src="images/decision_two.png" style="width:100%; text-align:center;">
-</div>
-
-<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
-  <img src="images/wdcs4.png" style="width:100%; text-align:center;">
-</div>
-
-<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
-  <img src="images/wdcs3.png" style="width:100%; text-align:center;">
-</div>
-
-<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
-  <img src="images/wdcs5.png" style="width:100%; text-align:center;">
+  <img src="images/wdcs1.png" style="width:100%; text-align:center;">
 </div>
 
 <div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
   <img src="images/wdcs2.png" style="width:100%; text-align:center;">
 </div>
 
-<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in">
-  <img src="images/wdcs6.png" style="width:100%; text-align:center;">
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/areas1.png" style="width:100%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/areas2.png" style="width:100%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/areas3.png" style="width:100%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/areas4.png" style="width:100%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/areas5.png" style="width:100%; text-align:center;">
 </div>
 
 
-
-## Contribution {.background-slide}
+## Contribution 
 
 ::: {.fragment .fade-in-then-out}
 
-- [Extension of clinical utility measures]{style="color:#EB589A;"} (NB and EC) to dynamic prediction
-- [Dynamic IWEC]{style="color:#EB589A;"} definition and [weighted decision curves]{style="color:#EB589A;"}
-- [IPW estimator]{style="color:#EB589A;"} tailored to [LTRC data]{style="color:#EB589A;"} 
-- All methods will be available in the [JMbayes2 R package]{style="color:#EB589A;"}
+- [Extension of clinical utility measures]{style="color:#BA1732;"} to dynamic prediction
+- [Dynamic IWEC]{style="color:#BA1732;"} and [weighted decision curves]{style="color:#BA1732;"}
+- [A comprehensive estimation framework]{style="color:#BA1732;"} for [LTRC data]{style="color:#BA1732;"} 
+- All methods will be available in the [JMbayes2 R package]{style="color:#BA1732;"}
 
 <center>
 <img src="images/JMBayes2-logo-no-background.gif" width="23%">
@@ -392,17 +386,20 @@ $$\scriptsize\begin{split}
 
 :::
 
-## Limitations {.background-slide}
+## Limitations & future research
 
-- Reducing the time-to-event outcome to a [binary outcome]{style="color:#EB589A;"} discards relevant information 
-- Assumption of [covariate independence]{style="color:#EB589A;"} from truncation and censoring
+- Reducing the time-to-event outcome to a [binary outcome]{style="color:#BA1732;"} discards relevant information. 
+
+<div style="height:30px;"></div>
+
+- Identifying the best-performing [joint model]{style="color:#BA1732;"} and translating it into an [online tool for obstetricians]{style="color:#BA1732;"} to generate dynamic risk predictions for delivery.
 
 
 
-## { data-state="cover-slide" data-background-image="images/contra.png" data-background-size="cover" visibility="uncounted"}
+## { data-state="cover-slide" data-background-image="images/oslo_contra.png" data-background-size="cover" visibility="uncounted"}
 
 
-## Challenges of the data {.background-slide visibility="uncounted"}
+## Challenges of the data {visibility="uncounted"}
 
 -   CCS cannot be administered until the fetus reaches [$500$ grams]{style="color:#EB589A;"} and a gestational age of [$168$ days]{style="color:#EB589A;"} ($24$ weeks)
 
@@ -410,7 +407,7 @@ $$\scriptsize\begin{split}
   <img src="images/LT2.svg" style="width:90%; text-align:center;">
 </div>
 
-## IPW estimator {.background-slide visibility="uncounted"}
+## Challenges of the data {visibility="uncounted"}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
 - Under LTRC data $D_i(t,s)=\mathbf{1}\{t<T_i^*\leq t+s\}$ is [unobserved]{style="color:#EB589A;"} for $i$ censored within $(t, t+s]$ or $L_i>t$
@@ -426,11 +423,13 @@ $$\scriptsize\begin{split}
 
 </div>
 
+## IPW estimator {visibility="uncounted"}
+
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
 
-* We address this problem defining the [IPW estimator]{style="color:#EB589A;"}
+* We define the [IPW estimator]{style="color:#EB589A;"}
 
-$$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\tilde{D}_i(t,s)\big)$$
+$$\scriptsize\require{color} \widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}{n_t} \sum_{i:L_i<t<T_i} \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\tilde{D}_i(t,s)\big)$$
 
 
   + $n_t$ number of individuals at risk at $t$
@@ -441,9 +440,9 @@ $$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \wide
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
 
-* We address this problem defining the [IPW estimator]{style="color:#EB589A;"}
+* We define the [IPW estimator]{style="color:#EB589A;"}
 
-$$ \require{color}\widehat{\text{eIWEC}_w}(t,s)=\frac{1}{\textcolor{#EB589A}{n_t}} \sum_{i=1}^n \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\tilde{D}_i(t,s)\big)$$
+$$ \scriptsize\require{color}\widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}{\textcolor{#EB589A}{n_t}} \sum_{i:L_i<t<T_i} \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\tilde{D}_i(t,s)\big)$$
 
 
   + $\textcolor{#EB589A}{n_t}$ number of individuals at risk at $t$
@@ -455,9 +454,9 @@ $$ \require{color}\widehat{\text{eIWEC}_w}(t,s)=\frac{1}{\textcolor{#EB589A}{n_t
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
 
-* We address this problem defining the [IPW estimator]{style="color:#EB589A;"}
+* We define the [IPW estimator]{style="color:#EB589A;"}
 
-$$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\textcolor{#EB589A}{\tilde{D}_i(t,s)}\big)$$
+$$\scriptsize\require{color} \widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}{n_t} \sum_{i:L_i<t<T_i} \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\textcolor{#EB589A}{\tilde{D}_i(t,s)}\big)$$
 
 
   + $n_t$ number of individuals at risk at $t$
@@ -468,9 +467,9 @@ $$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \wide
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
 
-* We address this problem defining the [IPW estimator]{style="color:#EB589A;"}
+* We define the [IPW estimator]{style="color:#EB589A;"}
 
-$$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \textcolor{#EB589A}{\widehat{W}_i(t,s)}\text{IWEC}_w\big(\pi_i(s\mid t),\tilde{D}_i(t,s)\big)$$
+$$\scriptsize\require{color} \widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}{n_t} \sum_{i:L_i<t<T_i} \textcolor{#EB589A}{\widehat{W}_i(t,s)}\text{IWEC}_w\big(\pi_i(s\mid t),\tilde{D}_i(t,s)\big)$$
 
 
   + $n_t$ number of individuals at risk at $t$
@@ -480,14 +479,75 @@ $$\require{color} \widehat{\text{eIWEC}_w}(t,s)=\frac{1}{n_t} \sum_{i=1}^n \text
 </div>
 
 
+
+
+## Model-based estimator {visibility="uncounted"}
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+
+* We define the [model-based estimator]{style="color:#EB589A;"}
+
+$$\scriptsize\require{color}\begin{split}
+        \widehat{\text{eIWEC}}^{\text{MB}}_w(t,s)=  \frac{1}{n_t}&\sum_{i=1}^n  \delta_i\mathbf{1}\{L_i<t<T_i\leq t+s\}\text{IWEC}_w\{\pi_i(s\mid t),1\} \\
+        &+ \mathbf{1}\{T_i>t+s\}\mathbf{1}\{L_i<t\}\text{IWEC}_w\{\pi_i(s\mid t),0\} \\
+        & + (1-\delta_i)\mathbf{1}\{L_i<t<T_i\leq t+s\}\left[\pi_i(s\mid t)\text{IWEC}_w\{\pi_i(s\mid t),1\} \\
+        + (1-\pi_i(s\mid t))\text{IWEC}_w\{\pi_i(s\mid t),0\} \right].
+    \end{split}$$
+
+
+
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+
+* We define the [model-based estimator]{style="color:#EB589A;"}
+
+$$\scriptsize\require{color}\begin{split}
+        \widehat{\text{eIWEC}}^{\text{MB}}_w(t,s)=  \frac{1}{n_t}&\sum_{i=1}^n  \textcolor{#EB589A}{\delta_i\mathbf{1}\{L_i<t<T_i\leq t+s\}}\text{IWEC}_w\{\pi_i(s\mid t),\textcolor{#EB589A}{1}\} \\
+        &+ \mathbf{1}\{T_i>t+s\}\mathbf{1}\{L_i<t\}\text{IWEC}_w\{\pi_i(s\mid t),0\} \\
+        & + (1-\delta_i)\mathbf{1}\{L_i<t<T_i\leq t+s\}\left[\pi_i(s\mid t)\text{IWEC}_w\{\pi_i(s\mid t),1\} \\
+        + (1-\pi_i(s\mid t))\text{IWEC}_w\{\pi_i(s\mid t),0\} \right].
+    \end{split}$$
+
+
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+
+* We define the [model-based estimator]{style="color:#EB589A;"}
+
+$$\scriptsize\require{color}\begin{split}
+        \widehat{\text{eIWEC}}^{\text{MB}}_w(t,s)=  \frac{1}{n_t}&\sum_{i=1}^n  \delta_i\mathbf{1}\{L_i<t<T_i\leq t+s\}\text{IWEC}_w\{\pi_i(s\mid t),1\} \\
+        &+ \textcolor{#EB589A}{\mathbf{1}\{T_i>t+s\}\mathbf{1}\{L_i<t\}}\text{IWEC}_w\{\pi_i(s\mid t),\textcolor{#EB589A}{0}\} \\
+        & + (1-\delta_i)\mathbf{1}\{L_i<t<T_i\leq t+s\}\left[\pi_i(s\mid t)\text{IWEC}_w\{\pi_i(s\mid t),1\} \\
+        + (1-\pi_i(s\mid t))\text{IWEC}_w\{\pi_i(s\mid t),0\} \right].
+    \end{split}$$
+
+
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+
+* We define the [model-based estimator]{style="color:#EB589A;"}
+
+$$\scriptsize\require{color}\begin{split}
+        \widehat{\text{eIWEC}}^{\text{MB}}_w(t,s)=  \frac{1}{n_t}&\sum_{i=1}^n  \delta_i\mathbf{1}\{L_i<t<T_i\leq t+s\}\text{IWEC}_w\{\pi_i(s\mid t),1\} \\
+        &+ \mathbf{1}\{T_i>t+s\}\mathbf{1}\{L_i<t\}\text{IWEC}_w\{\pi_i(s\mid t),0\} \\
+        & + \textcolor{#EB589A}{(1-\delta_i)\mathbf{1}\{L_i<t<T_i\leq t+s\}}\left[\textcolor{#EB589A}{\pi_i(s\mid t)}\text{IWEC}_w\{\pi_i(s\mid t),\textcolor{#EB589A}{1}\} \\
+        + \textcolor{#EB589A}{(1-\pi_i(s\mid t))}\text{IWEC}_w\{\pi_i(s\mid t),\textcolor{#EB589A}{0}\} \right].
+    \end{split}$$
+
+
+</div>
+
+## Large sample properties  {visibility="uncounted"}
+
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
-* We demostrated that
-  + $\widehat{\text{eIWEC}_w}(t,s)$ is a [consistent]{style="color:#EB589A;"} estimator of $\text{eIWEC}_w(t,s)$
-  + $\sqrt{n}\big(\widehat{\text{eIWEC}_w}(t,s)-\text{eIWEC}_w(t,s)\big) \textcolor{#EB589A}{\xrightarrow{d}} N(0, \sigma^2(t,s))$ 
+* We demonstrated that both the IPW and model-based estimators are:
+  + [Consistent]{style="color:#EB589A;"}
+  + [Asymptotically normal]{style="color:#EB589A;"} 
 </div>
 
 <div style="position:absolute; top:53%; left:0%;" class="fragment fade-in">
 * This result applies to [all centered strictly proper metrics]{style="color:#EB589A;"}, including the dynamic Brier score and logarithmic score
 </div>
-
-

@@ -292,8 +292,8 @@ $$\scriptsize\begin{split}
 \textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{Y_{ji}(t)\} \right) 
 \end{split}$$
 
-- [Dynamic predictions]{style="color:#BA1732;"} $\longrightarrow$  $(182, 189]$ days ($(26, 27]$ weeks) of gestation. 
-- We consider [$c\in(0.1,0.3)$]{style="color:#BA1732;"} and [$w(c;5.16, 17.62)$]{style="color:#BA1732;"}
+- [Dynamic predictions]{style="color:#BA1732;"} $\longrightarrow$  $(182, 189]$ days = $(26, 27]$ weeks of gestation. 
+- We consider [$c\in(0.1,0.3)$]{style="color:#BA1732;"} and [$w(c;5.16, 17.62)$]{style="color:#BA1732;"}.
 </div>
 
 
@@ -330,10 +330,10 @@ $$\scriptsize\begin{split}
 
 ::: {.fragment .fade-in-then-out}
 
-- [Extension of clinical utility measures]{style="color:#BA1732;"} to dynamic prediction
-- [Dynamic IWEC]{style="color:#BA1732;"} and [weighted decision curves]{style="color:#BA1732;"}
-- [A comprehensive estimation framework]{style="color:#BA1732;"} for [LTRC data]{style="color:#BA1732;"} 
-- All methods will be available in the [JMbayes2 R package]{style="color:#BA1732;"}
+- [Extension of clinical utility]{style="color:#BA1732;"} to dynamic prediction.
+- [IWEC]{style="color:#BA1732;"} and [weighted decision curves]{style="color:#BA1732;"}.
+- [A comprehensive estimation framework]{style="color:#BA1732;"} for [LTRC data]{style="color:#BA1732;"}. 
+- Methods will be available in the [JMbayes2 R package]{style="color:#BA1732;"}.
 
 <center>
 <img src="images/JMBayes2-logo-no-background.gif" width="23%">
@@ -343,11 +343,11 @@ $$\scriptsize\begin{split}
 
 ## Limitations & future research
 
-- Reducing the time-to-event outcome to a [binary outcome]{style="color:#BA1732;"} discards relevant information. 
+- Limitations $\longrightarrow$ Reducing the time-to-event outcome to a [binary outcome]{style="color:#BA1732;"} discards relevant information. 
 
 <div style="height:30px;"></div>
 
-- Identifying the best-performing [joint model]{style="color:#BA1732;"} and translating it into an [online tool for obstetricians]{style="color:#BA1732;"} to generate dynamic risk predictions for delivery.
+- Future work $\longrightarrow$ Identifying the best-performing [joint model]{style="color:#BA1732;"} and translating it into an [online tool for obstetricians]{style="color:#BA1732;"} to generate dynamic risk predictions for delivery.
 
 
 

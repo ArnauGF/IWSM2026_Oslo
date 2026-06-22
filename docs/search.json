@@ -67,21 +67,21 @@
     "href": "index.html#application-opticore",
     "title": "",
     "section": "Application: OPTICORE",
-    "text": "Application: OPTICORE\n\n\nGoal \\(\\longrightarrow\\) outperform current clinical practice for CCS administration.\nIn the Netherlands:\n\nStrategy 1 \\(\\longrightarrow\\) when pulsatility index of the umbilical artery becomes abnormal\nStrategy 2 \\(\\longrightarrow\\) when an absent or reversed end-diastolic velocity of the umbilical artery is detected\n\n\n\n\n\nJoint model considering four different fetal outcomes:\n\n\\[\\scriptsize\\begin{split}\n\\textcolor{#BA1732}{\\text{JM}}:  h_{i}\\left(t \\mid \\boldsymbol{\\mathcal{H}}_{i}(t), \\boldsymbol{X}_{i}\\right) =h_{0}(t) \\exp \\left(  \\gamma\\boldsymbol{X}_{i} + \\sum_{j=1}^4\\alpha_j f_j\\{Y_{ji}(t)\\} \\right)\n\\end{split}\\]\n\nDynamic predictions \\(\\longrightarrow\\) \\((182, 189]\\) days (\\((26, 27]\\) weeks) of gestation.\nWe consider \\(c\\in(0.1,0.3)\\) and \\(w(c;5.16, 17.62)\\)"
+    "text": "Application: OPTICORE\n\n\nGoal \\(\\longrightarrow\\) outperform current clinical practice for CCS administration.\nIn the Netherlands:\n\nStrategy 1 \\(\\longrightarrow\\) when pulsatility index of the umbilical artery becomes abnormal\nStrategy 2 \\(\\longrightarrow\\) when an absent or reversed end-diastolic velocity of the umbilical artery is detected\n\n\n\n\n\nJoint model considering four different fetal outcomes:\n\n\\[\\scriptsize\\begin{split}\n\\textcolor{#BA1732}{\\text{JM}}:  h_{i}\\left(t \\mid \\boldsymbol{\\mathcal{H}}_{i}(t), \\boldsymbol{X}_{i}\\right) =h_{0}(t) \\exp \\left(  \\gamma\\boldsymbol{X}_{i} + \\sum_{j=1}^4\\alpha_j f_j\\{Y_{ji}(t)\\} \\right)\n\\end{split}\\]\n\nDynamic predictions \\(\\longrightarrow\\) \\((182, 189]\\) days = \\((26, 27]\\) weeks of gestation.\nWe consider \\(c\\in(0.1,0.3)\\) and \\(w(c;5.16, 17.62)\\)."
   },
   {
     "objectID": "index.html#contribution",
     "href": "index.html#contribution",
     "title": "",
     "section": "Contribution",
-    "text": "Contribution\n\n\nExtension of clinical utility measures to dynamic prediction\nDynamic IWEC and weighted decision curves\nA comprehensive estimation framework for LTRC data\nAll methods will be available in the JMbayes2 R package"
+    "text": "Contribution\n\n\nExtension of clinical utility to dynamic prediction.\nIWEC and weighted decision curves.\nA comprehensive estimation framework for LTRC data.\nMethods will be available in the JMbayes2 R package."
   },
   {
     "objectID": "index.html#limitations-future-research",
     "href": "index.html#limitations-future-research",
     "title": "",
     "section": "Limitations & future research",
-    "text": "Limitations & future research\n\nReducing the time-to-event outcome to a binary outcome discards relevant information.\n\n\n\n\n\nIdentifying the best-performing joint model and translating it into an online tool for obstetricians to generate dynamic risk predictions for delivery."
+    "text": "Limitations & future research\n\nLimitations \\(\\longrightarrow\\) Reducing the time-to-event outcome to a binary outcome discards relevant information.\n\n\n\n\n\nFuture work \\(\\longrightarrow\\) Identifying the best-performing joint model and translating it into an online tool for obstetricians to generate dynamic risk predictions for delivery."
   },
   {
     "objectID": "index.html#challenges-of-the-data",

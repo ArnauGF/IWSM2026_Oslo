@@ -286,10 +286,10 @@ $$\text{eIWEC}_w(t,s)=E\big[\text{IWEC}_w\big(\pi(s\mid t),D(t,s)\big) \mid T^*>
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-- [Joint model]{style="color:#BA1732;"} considering four different fetal outcomes:
+- Shared-parameter [joint model]{style="color:#BA1732;"} with four fetal outcomes:
 
 $$\scriptsize\begin{split} 
-\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{Y_{ji}(t)\} \right) 
+\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{\boldsymbol{\mathcal{H}}_{i}(t))\} \right) 
 \end{split}$$
 
 - [Dynamic predictions]{style="color:#BA1732;"} $\longrightarrow$  $(182, 189]$ days = $(26, 27]$ weeks of gestation. 
@@ -516,13 +516,23 @@ $$\scriptsize\require{color}\begin{split}
 
 $$ \require{color} Y_{ji}(t) = m_{ji}(t) + \varepsilon_{ji}(t), \quad j=1,\dots, 4 $$
 
-- $m_{ji}(t)$ $\longrightarrow$ natural cubic splines
+- $m_{ji}(t)=\mathcal{F}\left(t;\boldsymbol{\beta}^j, \boldsymbol{b}^j_i\right)$ $\longrightarrow$ natural cubic splines
 - $\varepsilon_{ji}(t)\sim N(0,\sigma^2)$
+
+<div style="height:12px;"></div>
+
+- [Outcomes]{style="color:#BA1732;"} $\longrightarrow$ pulsatility index of the umbilical artery and the middle cerebral artery, estimated fetal weight and short-term heart-rate variability.
 
 </div>
 
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-- [Linear mixed-effects]{style="color:#BA1732;"} submodels:
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in">
+- [Time-to-event]{style="color:#BA1732;"} submodel:
 
-$$ \require{color} Y_{ji}(t) = \colorbox{#BA1732}{$\color{#ffffff}m_{1i}(t)$} + \varepsilon_{1i}(t), \quad j=1,\dots, 4 $$
+$$\scriptsize\begin{split} 
+\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{m_{ji}(t)\} \right) 
+\end{split}$$
+
+- $\boldsymbol{X}_{i}$ $\longrightarrow$ baseline covariates including age, smoking status, previous pregnancy, diabetes mellitus, etc. 
+- Functional forms $\longrightarrow$ $f_j(t)=(m_{ji}(t)-m_{ji}(t-7))/7$ for $j=1,2,3$ and $f_4(t)=\frac{1}{7}\int_{t-7}^tm_{4i}(z)dz$.
+
 </div>

@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>quarto-input7e4bf78235704e1f</title>
+  <title>quarto-input6a207b54d24fdc36</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -397,10 +397,10 @@
 </div>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
-<li><span style="color:#BA1732;">Joint model</span> considering four different fetal outcomes:</li>
+<li>Shared-parameter <span style="color:#BA1732;">joint model</span> with four fetal outcomes:</li>
 </ul>
 <p><span class="math display">\[\scriptsize\begin{split}
-\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{Y_{ji}(t)\} \right)
+\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{\boldsymbol{\mathcal{H}}_{i}(t))\} \right)
 \end{split}\]</span></p>
 <ul>
 <li><span style="color:#BA1732;">Dynamic predictions</span> <span class="math inline">\(\longrightarrow\)</span> <span class="math inline">\((182, 189]\)</span> days = <span class="math inline">\((26, 27]\)</span> weeks of gestation.</li>
@@ -605,15 +605,27 @@
 </ul>
 <p><span class="math display">\[ \require{color} Y_{ji}(t) = m_{ji}(t) + \varepsilon_{ji}(t), \quad j=1,\dots, 4 \]</span></p>
 <ul>
-<li><span class="math inline">\(m_{ji}(t)\)</span> <span class="math inline">\(\longrightarrow\)</span> natural cubic splines</li>
+<li><span class="math inline">\(m_{ji}(t)=\mathcal{F}\left(t;\boldsymbol{\beta}^j, \boldsymbol{b}^j_i\right)\)</span> <span class="math inline">\(\longrightarrow\)</span> natural cubic splines</li>
 <li><span class="math inline">\(\varepsilon_{ji}(t)\sim N(0,\sigma^2)\)</span></li>
 </ul>
+<div style="height:12px;">
+
 </div>
-<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>
-<li><span style="color:#BA1732;">Linear mixed-effects</span> submodels:</li>
+<li><span style="color:#BA1732;">Outcomes</span> <span class="math inline">\(\longrightarrow\)</span> pulsatility index of the umbilical artery and the middle cerebral artery, estimated fetal weight and short-term heart-rate variability.</li>
 </ul>
-<p><span class="math display">\[ \require{color} Y_{ji}(t) = \colorbox{#BA1732}{$\color{#ffffff}m_{1i}(t)$} + \varepsilon_{1i}(t), \quad j=1,\dots, 4 \]</span></p>
+</div>
+<div class="fragment fade-in" style="position:absolute; top:13%; left:0%;">
+<ul>
+<li><span style="color:#BA1732;">Time-to-event</span> submodel:</li>
+</ul>
+<p><span class="math display">\[\scriptsize\begin{split}
+\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{m_{ji}(t)\} \right)
+\end{split}\]</span></p>
+<ul>
+<li><span class="math inline">\(\boldsymbol{X}_{i}\)</span> <span class="math inline">\(\longrightarrow\)</span> baseline covariates including age, smoking status, previous pregnancy, diabetes mellitus, etc.</li>
+<li>Functional forms <span class="math inline">\(\longrightarrow\)</span> <span class="math inline">\(f_j(t)=(m_{ji}(t)-m_{ji}(t-7))/7\)</span> for <span class="math inline">\(j=1,2,3\)</span> and <span class="math inline">\(f_4(t)=\frac{1}{7}\int_{t-7}^tm_{4i}(z)dz\)</span>.</li>
+</ul>
 </div>
 
 

@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>quarto-input6a207b54d24fdc36</title>
+  <title>quarto-inputcb5db7761bb879f6</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -402,6 +402,20 @@
 <p><span class="math display">\[\scriptsize\begin{split}
 \textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{\boldsymbol{\mathcal{H}}_{i}(t))\} \right)
 \end{split}\]</span></p>
+<div style="height:15px;">
+
+</div>
+<ul>
+<li><span class="math inline">\(\boldsymbol{X}_{i}\)</span> <span class="math inline">\(\longrightarrow\)</span> <span style="color:#BA1732;">baseline covariates</span> including age, smoking status, previous pregnancy, diabetes mellitus, etc.</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
+<ul>
+<li>Shared-parameter <span style="color:#BA1732;">joint model</span> with four fetal outcomes:</li>
+</ul>
+<p><span class="math display">\[\scriptsize\begin{split}
+\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{\boldsymbol{\mathcal{H}}_{i}(t))\} \right)
+\end{split}\]</span></p>
 <ul>
 <li><span style="color:#BA1732;">Dynamic predictions</span> <span class="math inline">\(\longrightarrow\)</span> <span class="math inline">\((182, 189]\)</span> days = <span class="math inline">\((26, 27]\)</span> weeks of gestation.</li>
 <li>We consider <span style="color:#BA1732;"><span class="math inline">\(c\in(0.1,0.3)\)</span></span> and <span style="color:#BA1732;"><span class="math inline">\(w(c;5.16, 17.62)\)</span></span>.</li>
@@ -491,7 +505,7 @@
 <p><span class="math display">\[\scriptsize\require{color} \widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}{n_t} \sum_{i:L_i&lt;t&lt;T_i} \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\tilde{D}_i(t,s)\big)\]</span></p>
 <ul>
 <li><span class="math inline">\(n_t\)</span> <span class="math inline">\(\longrightarrow\)</span> number of individuals at risk at <span class="math inline">\(t\)</span></li>
-<li><span class="math inline">\(\tilde{D}_i(t,s)\)</span> <span class="math inline">\(\longrightarrow\)</span> the observed binary indicator</li>
+<li><span class="math inline">\(\tilde{D}_i(t,s)=\mathbf{1}\{L_i&lt;t&lt;T_i\leq t+s\}\)</span> <span class="math inline">\(\longrightarrow\)</span> observed binary indicator</li>
 <li><span class="math inline">\(\widehat{W}_i(t,s)\)</span> <span class="math inline">\(\longrightarrow\)</span> adjust for LTRC data via left-truncated Kaplan–Meier of the censoring distribution</li>
 </ul>
 </div>
@@ -502,7 +516,7 @@
 <p><span class="math display">\[ \scriptsize\require{color}\widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}{\textcolor{#BA1732}{n_t}} \sum_{i:L_i&lt;t&lt;T_i} \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\tilde{D}_i(t,s)\big)\]</span></p>
 <ul>
 <li><span class="math inline">\(\textcolor{#BA1732}{n_t}\)</span> <span class="math inline">\(\longrightarrow\)</span> number of individuals at risk at <span class="math inline">\(t\)</span></li>
-<li><span class="math inline">\(\tilde{D}_i(t,s)\)</span> <span class="math inline">\(\longrightarrow\)</span> the observed binary indicator</li>
+<li><span class="math inline">\(\tilde{D}_i(t,s)=\mathbf{1}\{L_i&lt;t&lt;T_i\leq t+s\}\)</span> <span class="math inline">\(\longrightarrow\)</span> observed binary indicator</li>
 <li><span class="math inline">\(\widehat{W}_i(t,s)\)</span> <span class="math inline">\(\longrightarrow\)</span> adjust for LTRC data via left-truncated Kaplan–Meier of the censoring distribution</li>
 </ul>
 </div>
@@ -513,7 +527,7 @@
 <p><span class="math display">\[\scriptsize\require{color} \widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}{n_t} \sum_{i:L_i&lt;t&lt;T_i} \widehat{W}_i(t,s)\text{IWEC}_w\big(\pi_i(s\mid t),\textcolor{#BA1732}{\tilde{D}_i(t,s)}\big)\]</span></p>
 <ul>
 <li><span class="math inline">\(n_t\)</span> <span class="math inline">\(\longrightarrow\)</span> number of individuals at risk at <span class="math inline">\(t\)</span></li>
-<li><span class="math inline">\(\textcolor{#BA1732}{\tilde{D}_i(t,s)}\)</span> <span class="math inline">\(\longrightarrow\)</span> the observed binary indicator</li>
+<li><span class="math inline">\(\textcolor{#BA1732}{\tilde{D}_i(t,s)}=\mathbf{1}\{L_i&lt;t&lt;T_i\leq t+s\}\)</span> <span class="math inline">\(\longrightarrow\)</span> observed binary indicator</li>
 <li><span class="math inline">\(\widehat{W}_i(t,s)\)</span> <span class="math inline">\(\longrightarrow\)</span> adjust for LTRC data via left-truncated Kaplan–Meier of the censoring distribution</li>
 </ul>
 </div>
@@ -524,8 +538,22 @@
 <p><span class="math display">\[\scriptsize\require{color} \widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}{n_t} \sum_{i:L_i&lt;t&lt;T_i} \textcolor{#BA1732}{\widehat{W}_i(t,s)}\text{IWEC}_w\big(\pi_i(s\mid t),\tilde{D}_i(t,s)\big)\]</span></p>
 <ul>
 <li><span class="math inline">\(n_t\)</span> <span class="math inline">\(\longrightarrow\)</span> number of individuals at risk at <span class="math inline">\(t\)</span></li>
-<li><span class="math inline">\(\tilde{D}_i(t,s)\)</span> <span class="math inline">\(\longrightarrow\)</span> the observed binary indicator</li>
+<li><span class="math inline">\(\tilde{D}_i(t,s)=\mathbf{1}\{L_i&lt;t&lt;T_i\leq t+s\}\)</span> <span class="math inline">\(\longrightarrow\)</span> observed binary indicator</li>
 <li><span class="math inline">\(\textcolor{#BA1732}{\widehat{W}_i(t,s)}\)</span> <span class="math inline">\(\longrightarrow\)</span> adjust for LTRC data via left-truncated Kaplan–Meier of the censoring distribution</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
+<ul>
+<li><span style="color:#BA1732;">The weights</span>:</li>
+</ul>
+<p><span class="math display">\[\scriptsize \begin{split} \widehat{W}_i(t,s)=&amp;\frac{\mathbf{1}\{T_i&gt;t+s\}\mathbf{1}\{L_i&lt;t\}}{\widehat{G}(t+s\mid t)} + \frac{\mathbf{1}\{L_i&lt;t&lt;T_i\leq t+s\} \delta_i}{\widehat{G}(T_i\mid t)}\\
+&amp; + 0\cdot \mathbf{1}\{L_i&lt;t&lt;T_i\leq t+s\} (1-\delta_i)
+\end{split}\]</span></p>
+<div style="height:15px;">
+
+</div>
+<ul>
+<li>Individuals censored within <span class="math inline">\((t,t+s]\)</span> do not contribute.</li>
 </ul>
 </div>
 </section>
@@ -597,7 +625,7 @@
 </ul>
 </div>
 </section>
-<section id="the-joint-model" class="slide level2">
+<section id="the-joint-model" class="slide level2" data-visibility="uncounted">
 <h2>The joint model</h2>
 <div class="fragment fade-in-then-out" style="position:absolute; top:13%; left:0%;">
 <ul>

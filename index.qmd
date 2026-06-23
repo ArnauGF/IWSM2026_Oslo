@@ -292,6 +292,18 @@ $$\scriptsize\begin{split}
 \textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{\boldsymbol{\mathcal{H}}_{i}(t))\} \right) 
 \end{split}$$
 
+<div style="height:15px;"></div>
+
+- $\boldsymbol{X}_{i}$ $\longrightarrow$ [baseline covariates]{style="color:#BA1732;"} including age, smoking status, previous pregnancy, diabetes mellitus, etc. 
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+- Shared-parameter [joint model]{style="color:#BA1732;"} with four fetal outcomes:
+
+$$\scriptsize\begin{split} 
+\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{\boldsymbol{\mathcal{H}}_{i}(t))\} \right) 
+\end{split}$$
+
 - [Dynamic predictions]{style="color:#BA1732;"} $\longrightarrow$  $(182, 189]$ days = $(26, 27]$ weeks of gestation. 
 - We consider [$c\in(0.1,0.3)$]{style="color:#BA1732;"} and [$w(c;5.16, 17.62)$]{style="color:#BA1732;"}.
 </div>
@@ -388,7 +400,7 @@ $$\scriptsize\require{color} \widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}
 
 
   + $n_t$ $\longrightarrow$ number of individuals at risk at $t$
-  + $\tilde{D}_i(t,s)$ $\longrightarrow$ the observed binary indicator
+  + $\tilde{D}_i(t,s)=\mathbf{1}\{L_i<t<T_i\leq t+s\}$ $\longrightarrow$ observed binary indicator
   + $\widehat{W}_i(t,s)$  $\longrightarrow$ adjust for LTRC data via left-truncated Kaplan--Meier of the censoring distribution
 
 </div>
@@ -401,7 +413,7 @@ $$ \scriptsize\require{color}\widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}
 
 
   + $\textcolor{#BA1732}{n_t}$ $\longrightarrow$  number of individuals at risk at $t$
-  + $\tilde{D}_i(t,s)$ $\longrightarrow$  the observed binary indicator
+  + $\tilde{D}_i(t,s)=\mathbf{1}\{L_i<t<T_i\leq t+s\}$ $\longrightarrow$ observed binary indicator
   + $\widehat{W}_i(t,s)$ $\longrightarrow$  adjust for LTRC data via left-truncated Kaplan--Meier of the censoring distribution
   
 
@@ -415,7 +427,7 @@ $$\scriptsize\require{color} \widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}
 
 
   + $n_t$ $\longrightarrow$  number of individuals at risk at $t$
-  + $\textcolor{#BA1732}{\tilde{D}_i(t,s)}$ $\longrightarrow$  the observed binary indicator
+  + $\textcolor{#BA1732}{\tilde{D}_i(t,s)}=\mathbf{1}\{L_i<t<T_i\leq t+s\}$ $\longrightarrow$ observed binary indicator
   + $\widehat{W}_i(t,s)$ $\longrightarrow$ adjust for LTRC data via left-truncated Kaplan--Meier of the censoring distribution
 
 </div>
@@ -428,8 +440,22 @@ $$\scriptsize\require{color} \widehat{\text{eIWEC}}^{\text{IPW}}_w(t,s)=\frac{1}
 
 
   + $n_t$ $\longrightarrow$  number of individuals at risk at $t$
-  + $\tilde{D}_i(t,s)$ $\longrightarrow$  the observed binary indicator
+  + $\tilde{D}_i(t,s)=\mathbf{1}\{L_i<t<T_i\leq t+s\}$ $\longrightarrow$ observed binary indicator
   + $\textcolor{#BA1732}{\widehat{W}_i(t,s)}$ $\longrightarrow$  adjust for LTRC data via left-truncated Kaplan--Meier of the censoring distribution
+
+</div>
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+
+* [The weights]{style="color:#BA1732;"}:
+
+$$\scriptsize \begin{split} \widehat{W}_i(t,s)=&\frac{\mathbf{1}\{T_i>t+s\}\mathbf{1}\{L_i<t\}}{\widehat{G}(t+s\mid t)} + \frac{\mathbf{1}\{L_i<t<T_i\leq t+s\} \delta_i}{\widehat{G}(T_i\mid t)}\\
+& + 0\cdot \mathbf{1}\{L_i<t<T_i\leq t+s\} (1-\delta_i)
+\end{split}$$
+
+<div style="height:15px;"></div>
+
++ Individuals censored within $(t,t+s]$ do not contribute.
 
 </div>
 
@@ -509,7 +535,7 @@ $$\scriptsize\require{color}\begin{split}
   + [Logarithmic score]{style="color:#BA1732;"} 
 </div>
 
-## The joint model
+## The joint model {visibility="uncounted"}
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
 - [Linear mixed-effects]{style="color:#BA1732;"} submodels:

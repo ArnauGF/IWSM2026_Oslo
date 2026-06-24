@@ -56,18 +56,18 @@
     "text": "Estimation under LTRC data\n\nTo estimate:\n\n\\[\\text{eIWEC}_w(t,s)=E\\big[\\text{IWEC}_w\\big(\\pi(s\\mid t),D(t,s)\\big) \\mid T^*&gt;t\\big]\\]\n\nWe propose two approaches:\n\nA nonparametric IPW estimator.\nA model-based estimator.\n\nWe established consistency and asymptotic normality."
   },
   {
-    "objectID": "index.html#simulation-study",
-    "href": "index.html#simulation-study",
-    "title": "",
-    "section": "Simulation study",
-    "text": "Simulation study\n\n\nWe evaluate dynamic predictions within \\((1,3]\\) obtained via three Cox proportional-hazards models:\n\nThe true model \\(\\longrightarrow\\) \\(M_\\text{True}\\)\nTwo misspecified models \\(\\longrightarrow\\) \\(M_1, M_2\\)\n\n\n\n\nTo reflect the asymmetry between FP and FN in our clinical context, we set \\(c\\in(0.1, 0.3)\\)."
-  },
-  {
     "objectID": "index.html#application-opticore",
     "href": "index.html#application-opticore",
     "title": "",
     "section": "Application: OPTICORE",
-    "text": "Application: OPTICORE\n\n\nGoal \\(\\longrightarrow\\) outperform current clinical practice for CCS administration.\nIn the Netherlands:\n\nStrategy 1 \\(\\longrightarrow\\) when pulsatility index of the umbilical artery becomes abnormal\nStrategy 2 \\(\\longrightarrow\\) when an absent or reversed end-diastolic velocity of the umbilical artery is detected\n\n\n\n\n\nShared-parameter joint model with four fetal outcomes:\n\n\\[\\scriptsize\\begin{split}\n\\textcolor{#BA1732}{\\text{JM}}:  h_{i}\\left(t \\mid \\boldsymbol{\\mathcal{H}}_{i}(t), \\boldsymbol{X}_{i}\\right) =h_{0}(t) \\exp \\left(  \\gamma\\boldsymbol{X}_{i} + \\sum_{j=1}^4\\alpha_j f_j\\{\\boldsymbol{\\mathcal{H}}_{i}(t))\\} \\right)\n\\end{split}\\]\n\n\n\n\n\\(\\boldsymbol{X}_{i}\\) \\(\\longrightarrow\\) baseline covariates including age, smoking status, previous pregnancy, diabetes mellitus, etc.\n\n\n\n\nShared-parameter joint model with four fetal outcomes:\n\n\\[\\scriptsize\\begin{split}\n\\textcolor{#BA1732}{\\text{JM}}:  h_{i}\\left(t \\mid \\boldsymbol{\\mathcal{H}}_{i}(t), \\boldsymbol{X}_{i}\\right) =h_{0}(t) \\exp \\left(  \\gamma\\boldsymbol{X}_{i} + \\sum_{j=1}^4\\alpha_j f_j\\{\\boldsymbol{\\mathcal{H}}_{i}(t))\\} \\right)\n\\end{split}\\]\n\nDynamic predictions \\(\\longrightarrow\\) \\((182, 189]\\) days = \\((26, 27]\\) weeks of gestation.\nWe consider \\(c\\in(0.1,0.3)\\) and \\(w(c;5.16, 17.62)\\)."
+    "text": "Application: OPTICORE\n\n\nGoal \\(\\longrightarrow\\) outperform current clinical practice for CCS administration.\nIn the Netherlands:\n\nStrategy 1 \\(\\longrightarrow\\) when pulsatility index of the umbilical artery becomes abnormal\nStrategy 2 \\(\\longrightarrow\\) when an absent or reversed end-diastolic velocity of the umbilical artery is detected\n\n\n\n\n\nShared-parameter joint model with fetal and maternal outcomes:\n\n\\[\\scriptsize\\begin{split}\n\\textcolor{#BA1732}{\\text{JM}}:  h_{i}\\left(t \\mid \\boldsymbol{\\mathcal{H}}_{i}(t), \\boldsymbol{X}_{i}\\right) =h_{0}(t) \\exp \\left(  \\gamma\\boldsymbol{X}_{i} + \\sum_{j=1}^6\\alpha_j f_j\\{\\boldsymbol{\\mathcal{H}}_{i}(t))\\} \\right)\n\\end{split}\\]\n\n\n\n\n\\(\\boldsymbol{X}_{i}\\) \\(\\longrightarrow\\) baseline covariates including age, smoking status, previous pregnancy, diabetes mellitus, etc.\n\n\n\n\nShared-parameter joint model with fetal and maternal outcomes:\n\n\\[\\scriptsize\\begin{split}\n\\textcolor{#BA1732}{\\text{JM}}:  h_{i}\\left(t \\mid \\boldsymbol{\\mathcal{H}}_{i}(t), \\boldsymbol{X}_{i}\\right) =h_{0}(t) \\exp \\left(  \\gamma\\boldsymbol{X}_{i} + \\sum_{j=1}^6\\alpha_j f_j\\{\\boldsymbol{\\mathcal{H}}_{i}(t))\\} \\right)\n\\end{split}\\]\n\nDynamic predictions \\(\\longrightarrow\\) \\((29, 30]\\), \\((30, 31]\\) and \\((31, 32]\\) weeks of gestation.\nWe consider \\(c\\in(0.1,0.3)\\) and \\(w(c;5.16, 17.62)\\)."
+  },
+  {
+    "objectID": "index.html#simulation-study-results",
+    "href": "index.html#simulation-study-results",
+    "title": "",
+    "section": "Simulation study: results",
+    "text": "Simulation study: results\n\nBS, AUC and logS \\(\\longrightarrow\\) favored models with good accuracy and discrimination.\n\n\n\n\n\nNB and IWEC \\(\\longrightarrow\\) favored models that better reflected clinical value.\n\n\n\n\n\nNB \\(\\longrightarrow\\) sensitive to decision threshold misspecification.\n\n\n\n\n\nIWEC \\(\\longrightarrow\\) robust across weight functions."
   },
   {
     "objectID": "index.html#contribution",
@@ -123,6 +123,13 @@
     "href": "index.html#the-joint-model",
     "title": "",
     "section": "The joint model",
-    "text": "The joint model\n\n\nLinear mixed-effects submodels:\n\n\\[ \\require{color} Y_{ji}(t) = m_{ji}(t) + \\varepsilon_{ji}(t), \\quad j=1,\\dots, 4 \\]\n\n\\(m_{ji}(t)=\\mathcal{F}\\left(t;\\boldsymbol{\\beta}^j, \\boldsymbol{b}^j_i\\right)\\) \\(\\longrightarrow\\) natural cubic splines\n\\(\\varepsilon_{ji}(t)\\sim N(0,\\sigma^2)\\)\n\n\n\n\n\nOutcomes \\(\\longrightarrow\\) pulsatility index of the umbilical artery and the middle cerebral artery, estimated fetal weight and short-term heart-rate variability.\n\n\n\n\nTime-to-event submodel:\n\n\\[\\scriptsize\\begin{split}\n\\textcolor{#BA1732}{\\text{JM}}:  h_{i}\\left(t \\mid \\boldsymbol{\\mathcal{H}}_{i}(t), \\boldsymbol{X}_{i}\\right) =h_{0}(t) \\exp \\left(  \\gamma\\boldsymbol{X}_{i} + \\sum_{j=1}^4\\alpha_j f_j\\{m_{ji}(t)\\} \\right)\n\\end{split}\\]\n\n\\(\\boldsymbol{X}_{i}\\) \\(\\longrightarrow\\) baseline covariates including age, smoking status, previous pregnancy, diabetes mellitus, etc.\nFunctional forms \\(\\longrightarrow\\) \\(f_j(t)=(m_{ji}(t)-m_{ji}(t-7))/7\\) for \\(j=1,2,3\\) and \\(f_4(t)=\\frac{1}{7}\\int_{t-7}^tm_{4i}(z)dz\\)."
+    "text": "The joint model\n\n\nLinear mixed-effects submodels:\n\n\\[ \\require{color} Y_{ji}(t) = m_{ji}(t) + \\varepsilon_{ji}(t), \\quad j=1,\\dots, 6 \\]\n\n\\(m_{ji}(t)=\\mathcal{F}\\left(t;\\boldsymbol{\\beta}^j, \\boldsymbol{b}^j_i\\right)\\) \\(\\longrightarrow\\) natural cubic splines\n\\(\\varepsilon_{ji}(t)\\sim N(0,\\sigma^2)\\)\nOutcomes \\(\\longrightarrow\\) pulsatility index of the umbilical artery and the middle cerebral artery, estimated fetal weight and short-term heart-rate variability, diastolic and systolic blood pressure.\n\n\n\n\nTime-to-event submodel:\n\n\\[\\scriptsize\\begin{split}\n\\textcolor{#BA1732}{\\text{JM}}:  h_{i}\\left(t \\mid \\boldsymbol{\\mathcal{H}}_{i}(t), \\boldsymbol{X}_{i}\\right) =h_{0}(t) \\exp \\left(  \\gamma\\boldsymbol{X}_{i} + \\sum_{j=1}^4\\alpha_j f_j\\{m_{ji}(t)\\} \\right)\n\\end{split}\\]\n\n\\(\\boldsymbol{X}_{i}\\) \\(\\longrightarrow\\) baseline covariates including age, smoking status, previous pregnancy, diabetes mellitus, etc.\nFunctional forms \\(\\longrightarrow\\) \\(f_j(t)=(m_{ji}(t)-m_{ji}(t-7))/7\\) for \\(j=1,2,3,5,6\\) and \\(f_4(t)=\\frac{1}{7}\\int_{t-7}^tm_{4i}(z)dz\\)."
+  },
+  {
+    "objectID": "index.html#simulation-study",
+    "href": "index.html#simulation-study",
+    "title": "",
+    "section": "Simulation study",
+    "text": "Simulation study\n\n\nWe evaluate dynamic predictions within \\((1,3]\\) obtained via three Cox proportional-hazards models:\n\nThe true model \\(\\longrightarrow\\) \\(M_\\text{True}\\)\nTwo misspecified models \\(\\longrightarrow\\) \\(M_1, M_2\\)\n\n\n\n\nTo reflect the asymmetry between FP and FN in our clinical context, we set \\(c\\in(0.1, 0.3)\\)."
   }
 ]

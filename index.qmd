@@ -251,31 +251,6 @@ $$\text{eIWEC}_w(t,s)=E\big[\text{IWEC}_w\big(\pi(s\mid t),D(t,s)\big) \mid T^*>
 * We established [consistency]{style="color:#BA1732;"} and [asymptotic normality]{style="color:#BA1732;"}.
 
 
-
-## Simulation study 
-
-<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-* We [evaluate dynamic predictions]{style="color:#BA1732;"} within $(1,3]$ obtained via three Cox proportional-hazards models:
-  + The true model $\longrightarrow$ [$M_\text{True}$]{style="color:#BA1732;"}
-  + Two misspecified models $\longrightarrow$ [$M_1, M_2$]{style="color:#BA1732;"}
-<div style="height:25px;"></div>
-* To reflect the [asymmetry between FP and FN]{style="color:#BA1732;"} in our clinical context, we set [$c\in(0.1, 0.3)$]{style="color:#BA1732;"}.
-</div>
-
-<div style="position:absolute; top:10%; left:12%;" class="fragment fade-in-then-out">
-  <img src="images/ws_simulstudy.png" style="width:85%; text-align:center;">
-</div>
-
-<div style="position:absolute; top:12%; left:0%;" class="fragment fade-in">
-  <img src="images/plot_left.png" style="width:48%; text-align:center;">
-</div>
-
-<div style="position:absolute; top:12.1%; left:50%;" class="fragment fade-in">
-  <img src="images/plot_right.png" style="width:150%; text-align:center;">
-</div>
-
-
-
 ## Application: OPTICORE 
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
@@ -286,10 +261,10 @@ $$\text{eIWEC}_w(t,s)=E\big[\text{IWEC}_w\big(\pi(s\mid t),D(t,s)\big) \mid T^*>
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-- Shared-parameter [joint model]{style="color:#BA1732;"} with four fetal outcomes:
+- Shared-parameter [joint model]{style="color:#BA1732;"} with fetal and maternal outcomes:
 
 $$\scriptsize\begin{split} 
-\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{\boldsymbol{\mathcal{H}}_{i}(t))\} \right) 
+\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^6\alpha_j f_j\{\boldsymbol{\mathcal{H}}_{i}(t))\} \right) 
 \end{split}$$
 
 <div style="height:15px;"></div>
@@ -298,13 +273,13 @@ $$\scriptsize\begin{split}
 </div>
 
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
-- Shared-parameter [joint model]{style="color:#BA1732;"} with four fetal outcomes:
+- Shared-parameter [joint model]{style="color:#BA1732;"} with fetal and maternal outcomes:
 
 $$\scriptsize\begin{split} 
-\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^4\alpha_j f_j\{\boldsymbol{\mathcal{H}}_{i}(t))\} \right) 
+\textcolor{#BA1732}{\text{JM}}:  h_{i}\left(t \mid \boldsymbol{\mathcal{H}}_{i}(t), \boldsymbol{X}_{i}\right) =h_{0}(t) \exp \left(  \gamma\boldsymbol{X}_{i} + \sum_{j=1}^6\alpha_j f_j\{\boldsymbol{\mathcal{H}}_{i}(t))\} \right) 
 \end{split}$$
 
-- [Dynamic predictions]{style="color:#BA1732;"} $\longrightarrow$  $(182, 189]$ days = $(26, 27]$ weeks of gestation. 
+- [Dynamic predictions]{style="color:#BA1732;"} $\longrightarrow$  $(29, 30]$, $(30, 31]$ and $(31, 32]$ weeks of gestation. 
 - We consider [$c\in(0.1,0.3)$]{style="color:#BA1732;"} and [$w(c;5.16, 17.62)$]{style="color:#BA1732;"}.
 </div>
 
@@ -336,6 +311,33 @@ $$\scriptsize\begin{split}
 <div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
   <img src="images/areas5.png" style="width:100%; text-align:center;">
 </div>
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/wdcs2_lmk210.png" style="width:100%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:12%; left:8%;" class="fragment fade-in-then-out">
+  <img src="images/wdcs2_lmk217.png" style="width:100%; text-align:center;">
+</div>
+
+## Simulation study: results 
+
+* [BS, AUC and logS]{style="color:#BA1732;"} $\longrightarrow$ favored models with good accuracy and discrimination.
+
+<div style="height:15px;"></div>
+
+* [NB and IWEC]{style="color:#BA1732;"} $\longrightarrow$ favored models that better reflected clinical value.
+
+<div style="height:15px;"></div>
+
+* [NB]{style="color:#BA1732;"} $\longrightarrow$ sensitive to decision threshold misspecification.
+
+<div style="height:15px;"></div>
+
+
+* [IWEC]{style="color:#BA1732;"} $\longrightarrow$ robust across weight functions.
+
+
 
 
 ## Contribution 
@@ -540,14 +542,11 @@ $$\scriptsize\require{color}\begin{split}
 <div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
 - [Linear mixed-effects]{style="color:#BA1732;"} submodels:
 
-$$ \require{color} Y_{ji}(t) = m_{ji}(t) + \varepsilon_{ji}(t), \quad j=1,\dots, 4 $$
+$$ \require{color} Y_{ji}(t) = m_{ji}(t) + \varepsilon_{ji}(t), \quad j=1,\dots, 6 $$
 
 - $m_{ji}(t)=\mathcal{F}\left(t;\boldsymbol{\beta}^j, \boldsymbol{b}^j_i\right)$ $\longrightarrow$ natural cubic splines
 - $\varepsilon_{ji}(t)\sim N(0,\sigma^2)$
-
-<div style="height:12px;"></div>
-
-- [Outcomes]{style="color:#BA1732;"} $\longrightarrow$ pulsatility index of the umbilical artery and the middle cerebral artery, estimated fetal weight and short-term heart-rate variability.
+- [Outcomes]{style="color:#BA1732;"} $\longrightarrow$ pulsatility index of the umbilical artery and the middle cerebral artery, estimated fetal weight and short-term heart-rate variability, diastolic and systolic blood pressure.
 
 </div>
 
@@ -559,6 +558,29 @@ $$\scriptsize\begin{split}
 \end{split}$$
 
 - $\boldsymbol{X}_{i}$ $\longrightarrow$ baseline covariates including age, smoking status, previous pregnancy, diabetes mellitus, etc. 
-- Functional forms $\longrightarrow$ $f_j(t)=(m_{ji}(t)-m_{ji}(t-7))/7$ for $j=1,2,3$ and $f_4(t)=\frac{1}{7}\int_{t-7}^tm_{4i}(z)dz$.
+- Functional forms $\longrightarrow$ $f_j(t)=(m_{ji}(t)-m_{ji}(t-7))/7$ for $j=1,2,3,5,6$ and $f_4(t)=\frac{1}{7}\int_{t-7}^tm_{4i}(z)dz$.
 
 </div>
+
+## Simulation study {visibility="uncounted"}
+
+<div style="position:absolute; top:13%; left:0%;" class="fragment fade-in-then-out">
+* We [evaluate dynamic predictions]{style="color:#BA1732;"} within $(1,3]$ obtained via three Cox proportional-hazards models:
+  + The true model $\longrightarrow$ [$M_\text{True}$]{style="color:#BA1732;"}
+  + Two misspecified models $\longrightarrow$ [$M_1, M_2$]{style="color:#BA1732;"}
+<div style="height:25px;"></div>
+* To reflect the [asymmetry between FP and FN]{style="color:#BA1732;"} in our clinical context, we set [$c\in(0.1, 0.3)$]{style="color:#BA1732;"}.
+</div>
+
+<div style="position:absolute; top:10%; left:12%;" class="fragment fade-in-then-out">
+  <img src="images/ws_simulstudy.png" style="width:85%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:12%; left:0%;" class="fragment fade-in">
+  <img src="images/plot_left.png" style="width:48%; text-align:center;">
+</div>
+
+<div style="position:absolute; top:12.1%; left:50%;" class="fragment fade-in">
+  <img src="images/plot_right.png" style="width:150%; text-align:center;">
+</div>
+

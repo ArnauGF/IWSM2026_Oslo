@@ -355,16 +355,6 @@ $$\scriptsize\begin{split}
 
 :::
 
-## Limitations & future research
-
-- Limitations $\longrightarrow$ Reducing the time-to-event outcome to a [binary outcome]{style="color:#BA1732;"} discards relevant information. 
-
-<div style="height:30px;"></div>
-
-- Future work $\longrightarrow$ Identifying the best-performing [joint model]{style="color:#BA1732;"} and translating it into an [online tool for obstetricians]{style="color:#BA1732;"} to generate dynamic risk predictions for delivery.
-
-
-
 ## { data-state="cover-slide" data-background-image="images/oslo_contra.png" data-background-size="cover" visibility="uncounted"}
 
 

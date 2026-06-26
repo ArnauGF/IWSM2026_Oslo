@@ -77,13 +77,6 @@
     "text": "Contribution\n\n\nExtension of clinical utility to dynamic prediction.\nIWEC and weighted decision curves.\nA comprehensive estimation framework for LTRC data.\nMethods will be available in the JMbayes2 R package."
   },
   {
-    "objectID": "index.html#limitations-future-research",
-    "href": "index.html#limitations-future-research",
-    "title": "",
-    "section": "Limitations & future research",
-    "text": "Limitations & future research\n\nLimitations \\(\\longrightarrow\\) Reducing the time-to-event outcome to a binary outcome discards relevant information.\n\n\n\n\n\nFuture work \\(\\longrightarrow\\) Identifying the best-performing joint model and translating it into an online tool for obstetricians to generate dynamic risk predictions for delivery."
-  },
-  {
     "objectID": "index.html#challenges-of-the-data",
     "href": "index.html#challenges-of-the-data",
     "title": "",
